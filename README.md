@@ -11,7 +11,9 @@ Each function has a help page (e.g. view the `roll.dice` help page with `?roll.d
 
 For installation and loading, run
 
+```
 install.packages("devtools")
 library(devtools)
 install_github("David-Statistics/Clancy-Functions")
 library(Clancy.Functions)
+```
