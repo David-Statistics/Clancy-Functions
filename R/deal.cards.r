@@ -2,13 +2,13 @@
 #'
 #' @param n.iter The number of iterations in the monte carlo simulation (integer > 0)
 #' @param hand.size The number of cards in each hand (shuffling would be \code{hand.size = 52})
-#' @param parallel Should the simulation take advantage of multiple cores (defaults to \code{FALSE} -
+#' @param parallel Should the simulation take advantage of multiple cores (defaults to \code{TRUE} -
 #'   highly recommended if \code{n.iter > 1e5})
 #' @return A list with \code{n.iter} elements. Each element is a data frame of
 #'   size \code{hand.size x 3}.
 #' @export
 #'
-deal.cards = function(n.iter = 1e5, hand.size = 5, parallel = FALSE) {
+deal.cards = function(n.iter = 1e5, hand.size = 5, parallel = TRUE) {
   stopifnot(n.iter %% 1 == 0 & n.iter > 0)
   stopifnot(hand.size %% 1 == 0 & hand.size > 0)
   suits <- c("Diamonds", "Clubs", "Hearts", "Spades")

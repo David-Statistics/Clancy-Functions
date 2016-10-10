@@ -6,7 +6,7 @@
 #' @param n.drawn The number of balls drawn from the urn in each iteration
 #' @param replacement Are the balls placed back in the urn after they're drawn? (defaults to \code{FALSE})
 #' @param collapse Should the return be the draws or the count of each color? (defaults to \code{FALSE})
-#' @param parallel Should the simulation take advantage of multiple cores (defaults to \code{FALSE} -
+#' @param parallel Should the simulation take advantage of multiple cores (defaults to \code{TRUE} -
 #'   highly recommended if \code{n.iter > 1e5})
 #'
 #' @return If \code{collapse == TRUE} the return is a \code{n.iter x n.colors} integer matrix
@@ -16,7 +16,7 @@
 #'
 draw.urn = function(n.iter = 1e5, n.colors = 2, n.balls = c(10,10),
                     n.drawn = 5, replacement = FALSE,
-                    collapse = FALSE, parallel = FALSE) {
+                    collapse = FALSE, parallel = TRUE) {
   stopifnot(n.iter %% 1 == 0 & n.iter > 0)
   stopifnot(n.colors %% 1 == 0 & n.colors > 0)
   stopifnot(all(n.balls %% 1 == 0) & all(n.balls > 0))
