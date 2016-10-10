@@ -5,7 +5,7 @@
 \title{Results from drawing different color balls from an urn}
 \usage{
 draw.urn(n.iter = 1e+05, n.colors = 2, n.balls = c(10, 10), n.drawn = 5,
-  replacement = FALSE, collapse = FALSE, parallel = FALSE)
+  replacement = FALSE, collapse = FALSE, parallel = TRUE)
 }
 \arguments{
 \item{n.iter}{The number of iterations in the monte carlo simulation (integer > 0)}
@@ -20,7 +20,7 @@ draw.urn(n.iter = 1e+05, n.colors = 2, n.balls = c(10, 10), n.drawn = 5,
 
 \item{collapse}{Should the return be the draws or the count of each color? (defaults to \code{FALSE})}
 
-\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{FALSE} -
+\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{TRUE} -
 highly recommended if \code{n.iter > 1e5})}
 }
 \value{

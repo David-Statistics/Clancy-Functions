@@ -5,7 +5,7 @@
 \title{Results of rolling dice}
 \usage{
 roll.dice(n.iter = 1e+05, n.dice = 1, sides = 6, sum.dice = FALSE,
-  parallel = FALSE)
+  parallel = TRUE)
 }
 \arguments{
 \item{n.iter}{The number of iterations in the monte carlo simulation (integer > 0)}
@@ -16,7 +16,7 @@ roll.dice(n.iter = 1e+05, n.dice = 1, sides = 6, sum.dice = FALSE,
 
 \item{sum.dice}{Should the result be the sum of the dice on each iteration (defaults to \code{FALSE})}
 
-\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{FALSE} -
+\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{TRUE} -
 highly recommended if \code{n.iter > 1e5})}
 }
 \value{

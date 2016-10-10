@@ -4,14 +4,14 @@
 \alias{deal.cards}
 \title{Results of dealing a hand of cards}
 \usage{
-deal.cards(n.iter = 1e+05, hand.size = 5, parallel = FALSE)
+deal.cards(n.iter = 1e+05, hand.size = 5, parallel = TRUE)
 }
 \arguments{
 \item{n.iter}{The number of iterations in the monte carlo simulation (integer > 0)}
 
 \item{hand.size}{The number of cards in each hand (shuffling would be \code{hand.size = 52})}
 
-\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{FALSE} -
+\item{parallel}{Should the simulation take advantage of multiple cores (defaults to \code{TRUE} -
 highly recommended if \code{n.iter > 1e5})}
 }
 \value{
