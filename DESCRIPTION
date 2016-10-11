@@ -3,7 +3,7 @@ Title: Useful Functions for Simulations
 Version: 0.0.0.9000
 Authors@R: person("David", "Clancy", email = "david.statistics@gmail.com", role = c("aut", "cre"))
 Description: A collection of functions that are useful for running monte carlo simulations. Note that functions are not completely optimized and any run with at least 1e6 should be run with the parallel option enabled.
-Depends: R (>= 3.3.0), parallel
+Depends: R (>= 3.2.0), parallel
 License: MIT License
 Encoding: UTF-8
 LazyData: true
