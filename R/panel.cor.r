@@ -3,8 +3,6 @@
 #' @export
 #' @example pairs(iris, upper.panel = panel.cor)
 #'
-#'
-#'
 panel.cor <- function(x, y, digits = 2, cex.cor, include.p = FALSE, ...)
 {
   usr <- par("usr"); on.exit(par(usr))
