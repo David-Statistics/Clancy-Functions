@@ -16,9 +16,9 @@ roll.dice = function(n.iter = 1e5, n.dice = 1, sides = 6,
   stopifnot(n.dice %% 1 == 0 & n.dice > 0)
   stopifnot(sides %% 1 == 0 & sides > 0)
   if(!parallel) {
-    results = sapply(seq_len(n.iter), FUN = function(i) {sample(seq_len(sides), size = n.dice, rep = TRUE)})
+    results = sapply(seq_len(n.iter), FUN = function(i) {sample(seq_len(sides), size = n.dice, replace = TRUE)})
   } else {
-    results = do.call(cbind, mclapply(seq_len(n.iter), FUN = function(i) {sample(seq_len(sides), size = n.dice, rep = TRUE)}))
+    results = do.call(cbind, mclapply(seq_len(n.iter), FUN = function(i) {sample(seq_len(sides), size = n.dice, replace = TRUE)}))
   }
   if(sum.dice & n.dice > 1) {return(colSums(results))}
   return(matrix(results, ncol = n.dice))

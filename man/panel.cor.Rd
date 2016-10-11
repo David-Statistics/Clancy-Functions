@@ -6,7 +6,25 @@
 \usage{
 panel.cor(x, y, digits = 2, cex.cor, include.p = FALSE, ...)
 }
+\arguments{
+\item{x}{variable for x-axis}
+
+\item{y}{variable for y-axis}
+
+\item{digits}{rounding cut off}
+
+\item{cex.cor}{type of point}
+
+\item{include.p}{Include p-value for correlation value?}
+
+\item{...}{extra plotting parameters}
+}
 \description{
 Used to replace duplicate scatterplots in a matrix
+}
+\examples{
+data("iris")
+  pairs(iris, upper.panel = panel.cor)
+
 }
 

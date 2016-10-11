@@ -1,7 +1,14 @@
 #' Used to replace duplicate scatterplots in a matrix
 #'
+#' @param x variable for x-axis
+#' @param y variable for y-axis
+#' @param digits rounding cut off
+#' @param cex.cor type of point
+#' @param include.p Include p-value for correlation value?
+#' @param ... extra plotting parameters
 #' @export
-#' @example pairs(iris, upper.panel = panel.cor)
+#' @examples data("iris")
+#'   pairs(iris, upper.panel = panel.cor)
 #'
 panel.cor <- function(x, y, digits = 2, cex.cor, include.p = FALSE, ...)
 {
